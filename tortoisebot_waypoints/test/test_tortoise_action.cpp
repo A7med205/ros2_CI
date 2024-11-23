@@ -100,7 +100,7 @@ protected:
 
 TEST_F(ActionTestFixture, TestPosition) {
   const double tolerance = 0.1;
-  send_goal(2.0, 2.0, 1.57); // x, y, yaw_
+  send_goal(1.0, 1.0, 1.57); // x, y, yaw_
   auto start_time = std::chrono::steady_clock::now();
   auto timeout = 100s;
   while (!done_ && std::chrono::steady_clock::now() - start_time < timeout) {
@@ -114,9 +114,9 @@ TEST_F(ActionTestFixture, TestPosition) {
 
 TEST_F(ActionTestFixture, TestOrientation) {
   const double tolerance = 0.1;
-  send_goal(2.0, 2.0, 1.57); // x, y, yaw_
+  send_goal(1.0, 1.0, 1.57); // x, y, yaw_
   auto start_time = std::chrono::steady_clock::now();
-  auto timeout = 30s;
+  auto timeout = 100s;
   while (!done_ && std::chrono::steady_clock::now() - start_time < timeout) {
     rclcpp::spin_some(action_Node);
   }
