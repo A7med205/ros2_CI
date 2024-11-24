@@ -33,7 +33,7 @@ sudo docker exec -d "$CONTAINER_NAME" bash -c \
 
 # Run test
 echo "Running tests..."
-sudo docker exec -d "$CONTAINER_NAME" bash -c \
+sudo docker exec "$CONTAINER_NAME" bash -c \
   'source /ros2_ws/install/setup.bash && colcon test --packages-select tortoisebot_waypoints --event-handler=console_direct+'
 
 # Cleanup: Kill simulation after timeout
