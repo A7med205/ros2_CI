@@ -38,7 +38,7 @@ sudo docker exec "$CONTAINER_NAME" bash -c \
 
 # Cleanup: Kill simulation after timeout
 echo "Simulation timeout: ${SIMULATION_TIMEOUT}..."
-sleep "$SIMULATION_TIMEOUT" && docker container kill "$CONTAINER_NAME" || true
+sleep "$SIMULATION_TIMEOUT" && sudo docker container kill "$CONTAINER_NAME" || true
 
 # Print finish text
 echo "Job finished successfully"
