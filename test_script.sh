@@ -12,7 +12,7 @@ ls -la
 
 # Build Docker image
 echo "Building Docker image..."
-docker build -t "$IMAGE_NAME" .
+sudo docker build -t "$IMAGE_NAME" .
 
 # Run container
 echo "Starting container..."
