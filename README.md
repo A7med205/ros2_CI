@@ -1,3 +1,6 @@
+#### Description
+A ROS2/Jenkins pipeline for building and running a docker image running a Gazebo simulator, testing a robot waypoint control node in the simulation and logging the test reults.
+
 #### Install and Start Docker
 ```
 sudo apt-get update
